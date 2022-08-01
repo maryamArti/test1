@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+  <html lang="">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="hero.1.0.0.js"></script>
+    <script src="fusion.1.0.0.js"></script>
+    </head>
+  <body>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-element {
+    position: absolute;
+  }
+  .fusion--player {
+    background-color: #fff;
+  }
+  
+  
+        #guid_58775769_3f8d_4abc_b60e_04e52878768e {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_2d0b5a26_c1b5_4ef5_abe7_130c277525ec {
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  background-color: #da7676;
+  border: 1px solid #707070;
+}
+#guid_4245063f_9d38_4917_b529_1e628c68786b {
+  width: 695px;
+  height: 695px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 539, 71);
+}
+#guid_1f8ec592_61d6_49eb_a601_3de59d14e7dd {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 539, 840);
+}
+#guid_0901b4eb_983c_4616_9b3a_26cae728af88 {
+  width: 399px;
+  height: 87px;
+  transform-origin: 50% 50%;
+  transform: translate(0px, 0px);
+}
+#guid_a881ede0_c2a2_41e4_9861_aceaabd33317 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_585e3f4c_4de2_47d6_94f4_132b5837056f {
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  background-color: #478f80;
+  border: 1px solid #707070;
+}
+#guid_ffd351c0_db43_4e1e_942b_f64e0ae4cf61 {
+  width: 915px;
+  height: 914px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 429, 71);
+}
+
+      
+
+  </style>
+
+  
+
+        <!-- /////////////////////// -->
+        <!-- Player -->
+        <div class="wrapper" style="position: relative; width: 100%; height: 100%;">
+          <div id="player" class="fusion--player" style="width: 100%; height: 100%; ">
+            <div class="fusion--viewport">
+            
+            
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_58775769_3f8d_4abc_b60e_04e52878768e">
+              <div class="fusion--scene--content">
+                
+<div id="guid_58775769_3f8d_4abc_b60e_04e52878768e" class="artboard scene" >
+<div id="guid_2d0b5a26_c1b5_4ef5_abe7_130c277525ec" class="hero-element" >
+</div>
+<img id="guid_4245063f_9d38_4917_b529_1e628c68786b" class="hero-element" src="guid_4245063f_9d38_4917_b529_1e628c68786b.png" >
+
+<div id="guid_1f8ec592_61d6_49eb_a601_3de59d14e7dd" class="hero-element" >
+<img id="guid_0901b4eb_983c_4616_9b3a_26cae728af88" class="hero-element" src="guid_0901b4eb_983c_4616_9b3a_26cae728af88.png" >
+
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_a881ede0_c2a2_41e4_9861_aceaabd33317">
+              <div class="fusion--scene--content">
+                
+<div id="guid_a881ede0_c2a2_41e4_9861_aceaabd33317" class="artboard scene" >
+<div id="guid_585e3f4c_4de2_47d6_94f4_132b5837056f" class="hero-element" >
+</div>
+<img id="guid_ffd351c0_db43_4e1e_942b_f64e0ae4cf61" class="hero-element" src="guid_ffd351c0_db43_4e1e_942b_f64e0ae4cf61.png" >
+
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            </div>
+          </div>
+        </div>
+
+      
+
+
+  <!-- Hero/Fusion Player -->
+  <script>
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        window.player = new fusion.Player({
+          id: 'player',
+          // debug: true, 
+          scenes: [
+            
+            { 
+              id: 'guid_58775769_3f8d_4abc_b60e_04e52878768e', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_a881ede0_c2a2_41e4_9861_aceaabd33317', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+          ]
+        });
+        player.loadScene('guid_58775769_3f8d_4abc_b60e_04e52878768e');      
+      });
+    
+  </script>
+
+  <!-- Hero Scenes -->
+  <script>
+    
+      //---
+      // Scene: guid_58775769_3f8d_4abc_b60e_04e52878768e
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_58775769_3f8d_4abc_b60e_04e52878768e');          
+    
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_a881ede0_c2a2_41e4_9861_aceaabd33317
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_a881ede0_c2a2_41e4_9861_aceaabd33317');          
+    
+        }, 1);
+      }); // Scene end    
+    
+  </script>
+
+  <!-- Hero Timelines -->
+  <script>
+    
+    //---
+    // Scene: guid_58775769_3f8d_4abc_b60e_04e52878768e
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_58775769_3f8d_4abc_b60e_04e52878768e');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_a881ede0_c2a2_41e4_9861_aceaabd33317
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_a881ede0_c2a2_41e4_9861_aceaabd33317');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+  </script>
+
+  
+  
+</body>
+</html>
